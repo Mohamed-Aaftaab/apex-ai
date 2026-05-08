@@ -1,19 +1,21 @@
 .main {
-  padding: 2rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  background: #000;
 }
 
 .header {
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 2rem;
+  align-items: center;
   padding: 1.5rem 2rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid rgba(0, 255, 128, 0.1);
   backdrop-filter: blur(10px);
+  z-index: 10;
 }
 
 .branding h1 {
@@ -187,13 +189,12 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 1.5rem;
-  padding: 1rem 1.5rem 2rem 1.5rem;
+  padding: 1.5rem;
   max-width: 1800px;
   margin: 0 auto;
   width: 100%;
-  height: calc(100vh - 120px);
   overflow: hidden;
-  align-items: stretch;
+  min-height: 0;
 }
 
 .columnLeft, .columnRight {

@@ -200,7 +200,18 @@
   flex-direction: column;
   gap: 1.5rem;
   height: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-radar) transparent;
+}
+
+.columnLeft::-webkit-scrollbar, .columnRight::-webkit-scrollbar {
+  width: 4px;
+}
+
+.columnLeft::-webkit-scrollbar-thumb, .columnRight::-webkit-scrollbar-thumb {
+  background: var(--color-radar);
+  border-radius: 10px;
 }
 
 .columnCenter {

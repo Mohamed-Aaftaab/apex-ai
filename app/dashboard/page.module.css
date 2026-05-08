@@ -43,9 +43,24 @@
 
 .metricsBar {
   display: flex;
-  gap: 4rem;
+  gap: 5rem;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.metricItem .label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
 }
 
 .metricItem .value {

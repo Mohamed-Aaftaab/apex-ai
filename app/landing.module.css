@@ -612,13 +612,12 @@
 }
 
 .demoInfo h3 {
-  font-size: 1.5rem;
-  color: var(--color-radar);
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -1px;
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 15px var(--color-radar-glow);
+  line-height: 1.1;
 }
 
 .demoInfo p {

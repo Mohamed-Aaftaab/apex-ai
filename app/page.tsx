@@ -120,7 +120,7 @@ export default function LandingPage() {
 
         <RevealSection delay={styles.delay1}>
           <div className={styles.demoPreviewContainer}>
-            <div className={styles.demoVisual} style={{ padding: 0 }}>
+            <div className={styles.demoVisual}>
               <MarketVisualizer isLocked={true} />
             </div>
             <div className={styles.demoInfo}>

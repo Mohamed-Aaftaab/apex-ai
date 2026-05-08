@@ -300,7 +300,7 @@ export default function MarketVisualizer({ isLocked = false }: MarketVisualizerP
         ctx.fillText(
           `TREND PROJECTION (σ = ${sigma.toFixed(5)}, slope = ${(slope * 100).toFixed(3)}%)`,
           lastX + 20,
-          padding + 30 // Fixed top position to avoid line collision
+          lastCloseY - 50 // Dynamic position with safety gap
         );
       } else {
         predictionProgress = 0;

@@ -10,8 +10,8 @@ const TIERS = {
   pro:   { name: 'PREDATOR PRO', desc: 'All DEXs / Premium RPC', mntCost: 0.002, label: '0.002 MNT' },
 } as const;
 
-// Funds go to the existing registry contract on Mantle Sepolia
-const TREASURY_ADDRESS = '0x4dF55A7e1D5163511Bf52CD05F1a8FFe8c7c42Ae';
+// Funds go to the newly deployed, payable registry contract on Mantle Sepolia
+const TREASURY_ADDRESS = '0xd86C18c2b2e5Fc0dC5CCBD21416ECb0A8F8e57FA';
 const MANTLESCAN_TX_URL = 'https://sepolia.mantlescan.xyz/tx/';
 
 export default function BuyPage() {

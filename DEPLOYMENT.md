@@ -3,7 +3,7 @@
 To get the **"20 Project Deployment Award"** (Free Prize for the first 20 people), do these 3 things right now:
 
 ### 1. Verify Your Contract
-1. Go to [Mantlescan Sepolia](https://explorer.sepolia.mantle.xyz/address/0x4dF55A7e1D5163511Bf52CD05F1a8FFe8c7c42Ae).
+1. Go to [Mantlescan Sepolia](https://explorer.sepolia.mantle.xyz/address/0xd86C18c2b2e5Fc0dC5CCBD21416ECb0A8F8e57FA).
 2. Click the "Contract" tab -> "Verify and Publish."
 3. Upload the `ApexBotRegistry.sol` file and its ABI.
    - *This proves your code is real and scores you 30% technical depth.*

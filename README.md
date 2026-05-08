@@ -30,7 +30,7 @@
 ---
 
 ### 📦 Deployment Details
-- **Registry Contract (Mantle Sepolia)**: `0x4dF55A7e1D5163511Bf52CD05F1a8FFe8c7c42Ae`
+- **Registry Contract (Mantle Sepolia)**: `0xd86C18c2b2e5Fc0dC5CCBD21416ECb0A8F8e57FA`
 - **Network**: Mantle Network
 - **Status**: Production-Ready / Agentic Mode Enabled
 

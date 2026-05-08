@@ -30,7 +30,7 @@ export function mantlescanAddressUrl(address: string): string {
 
 // ─── ApexBotRegistry Contract ──────────────────────────────────────────────
 // This will be updated after deployment
-export const APEX_REGISTRY_ADDRESS = "0xcF7048594B9d259a2ee9149968Cf0678b24aE450";
+export const APEX_REGISTRY_ADDRESS = "0xd86C18c2b2e5Fc0dC5CCBD21416ECb0A8F8e57FA";
 
 export const APEX_REGISTRY_ABI = [
   'function logBot(address _botAddress, string memory _txHash, string memory _pattern, uint256 _confidence) public',

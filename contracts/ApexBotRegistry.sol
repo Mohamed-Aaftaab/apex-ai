@@ -139,4 +139,19 @@ contract ApexBotRegistry {
     function hasReporterLoggedBot(address reporter, address bot) public view returns (bool) {
         return reporterBotMap[reporter][bot];
     }
+
+    /**
+     * @dev Allow the contract to receive MNT for license fees.
+     */
+    receive() external payable {}
+
+    /**
+     * @dev Withdraw accumulated license fees to the owner.
+     */
+    function withdraw() public onlyOwner {
+        uint256 balance = address(this).balance;
+        require(balance > 0, "No funds to withdraw");
+        (bool success, ) = payable(owner).call{value: balance}("");
+        require(success, "Withdrawal failed");
+    }
 }

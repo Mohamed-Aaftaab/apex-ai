@@ -1,0 +1,123 @@
+.main {
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--color-radar);
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.agentBadge {
+  display: flex;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+}
+
+.agentId, .agentRep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agentId .label, .agentRep .label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.agentId .value, .agentRep .value {
+  font-size: 1rem;
+  color: var(--color-radar);
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 255, 128, 0.1);
+  border: 1px solid var(--color-radar);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: var(--color-radar);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: bold;
+  min-width: 180px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-radar);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-radar-glow);
+  animation: pulse 2s infinite;
+}
+
+.syncing {
+  background-color: #ffcc00 !important;
+  box-shadow: 0 0 10px #ffcc00 !important;
+}
+
+.dashboard {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+  max-height: calc(100vh - 120px);
+  overflow: hidden;
+}
+
+.columnLeft, .columnRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.columnCenter {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}

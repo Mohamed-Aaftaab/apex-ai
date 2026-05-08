@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# APEX.AI // Mantle Bot-Hunter Engine
 
-## Getting Started
+**APEX.AI** is an autonomous agentic "immune system" for the Mantle Network. It performs real-time, block-by-block analysis of network traffic to identify, flag, and register malicious bot activity (MEV, sandwiching, spamming) onto a global on-chain registry.
 
-First, run the development server:
+### 🏆 Hackathon Tracks
+- **Alpha & Data Track**: Unlocking value through real-time anomaly detection.
+- **Best UI/UX**: Institutional-grade cyberpunk terminal.
+- **Agentic AI**: Fully autonomous server-side signing and decision making.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🚀 Key Features
+- **Agentic Autonomy**: Unlike traditional tools, APEX.AI operates as a "Zero-Click" agent. It uses server-side signing via Ethers.js to log detections on-chain without requiring manual user approval for every action.
+- **Real-Time Heuristic Intelligence**: Scans every transaction in every block for specific bot signatures:
+  - `HIGH_FREQ_SENDER`: Pattern recognition for transaction spamming.
+  - `CONTRACT_SPAMMER`: Detecting malicious automated contract interactions.
+  - `SANDWICH_PROBABLE`: Identifying potential MEV exploitation.
+- **Global Bot Registry**: Detections are permanent and transparent, recorded on the Mantle Sepolia network for other protocols to query as a "Trust Score."
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛠️ Technical Architecture
+- **Frontend**: Next.js 16 (Turbopack), TailwindCSS, Lucide-Icons.
+- **Backend**: Next.js Server Actions & API Routes for secure transaction signing.
+- **Blockchain**: 
+  - **Scanning**: Mantle Mainnet (JSON-RPC).
+  - **Registry**: Mantle Sepolia (Smart Contracts).
+- **Security**: Server-side signing uses `DEPLOYER_PRIVATE_KEY` in a secure environment to prevent private key exposure.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 📦 Deployment Details
+- **Registry Contract (Mantle Sepolia)**: `0x4dF55A7e1D5163511Bf52CD05F1a8FFe8c7c42Ae`
+- **Network**: Mantle Network
+- **Status**: Production-Ready / Agentic Mode Enabled
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 💻 Installation & Setup
+1. **Clone the Repo**:
+   ```bash
+   git clone <your-repo-url>
+   cd apex-ui
+   ```
+2. **Environment Variables**: Create a `.env.local`:
+   ```env
+   DEPLOYER_PRIVATE_KEY=your_key_here
+   ```
+3. **Run the Engine**:
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🛡️ Why APEX.AI Matters for Mantle
+Malicious bots drain yield from RWA holders (USDY/mETH) and increase gas costs for regular users. APEX.AI provides the transparency needed to identify these actors and ensure Mantle remains the most human-friendly L2.

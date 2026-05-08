@@ -1,0 +1,59 @@
+.radarContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--color-radar);
+}
+
+.statusScanning {
+  color: var(--color-info);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  animation: blink 1.5s infinite;
+}
+
+.statusLocked {
+  color: var(--color-target);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--color-target-glow);
+  animation: pulse 0.5s infinite;
+}
+
+.canvasWrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.canvas {
+  background: radial-gradient(circle, rgba(0, 255, 128, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.1);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

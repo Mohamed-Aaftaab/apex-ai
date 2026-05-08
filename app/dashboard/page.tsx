@@ -225,35 +225,6 @@ export default function Dashboard() {
       <div className="scanline-overlay"></div>
 
       <header className={styles.header}>
-        <div className={styles.brand}>
-          <h1 className="glow-text">APEX.AI</h1>
-          <span className={styles.subtitle}>MANTLE NETWORK // BOT-HUNTER ENGINE</span>
-        </div>
-        <div className={styles.agentBadge}>
-          <div className={styles.agentId}>
-            <span className={styles.label}>BLOCKS SCANNED</span>
-            <span className={styles.value}>{engineStats.blocksAnalyzed}</span>
-            <div className={styles.statCard}>
-              <div className={styles.statLabel}>AGENT STATUS</div>
-              <div className={styles.statValue} style={{ color: '#00ff00' }}>ACTIVE</div>
-            </div>
-            <div className={styles.statCard}>
-              <div className={styles.statLabel}>PREDATORY UNIT</div>
-              <div className={styles.statValue} style={{ color: '#ff0055', textShadow: '0 0 10px rgba(255,0,85,0.5)' }}>STANDBY</div>
-            </div>
-            <div className={styles.statCard}>
-              <div className={styles.statLabel}>VALUE CAPTURABLE</div>
-              <div className={styles.statValue}>${(Number(engineStats.blocksAnalyzed) * 1.42).toFixed(2)}</div>
-            </div>
-          </div>
-          <div className={styles.agentRep}>
-            <span className={styles.label}>BOTS DETECTED</span>
-            <span className={styles.value}>{engineStats.botsDetected}</span>
-          </div>
-          <div className={styles.agentRep}>
-            <span className={styles.label}>ON-CHAIN REP</span>
-            <span className={styles.value}>{onChainReputation}</span>
-          </div>
         </div>
         <div className={styles.statusBadge}>
           <span className={`${styles.dot} ${syncStatus === 'SYNCING' ? styles.syncing : ''}`}></span>

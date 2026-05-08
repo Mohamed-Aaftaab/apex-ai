@@ -281,9 +281,10 @@ export default function MarketVisualizer({ isLocked = false }: MarketVisualizerP
             ctx.fillStyle = color;
             ctx.fill();
 
-            ctx.font = '10px monospace';
+            ctx.font = '800 10px monospace';
             ctx.shadowBlur = 0;
-            ctx.fillText(label, targetX + 10, targetY + 4);
+            ctx.textAlign = 'left';
+            ctx.fillText(label, targetX + 25, targetY + 4);
           }
         };
 
@@ -299,8 +300,8 @@ export default function MarketVisualizer({ isLocked = false }: MarketVisualizerP
         ctx.textAlign = 'left';
         ctx.fillText(
           `TREND PROJECTION (σ = ${sigma.toFixed(5)}, slope = ${(slope * 100).toFixed(3)}%)`,
-          lastX + 20,
-          lastCloseY - 50 // Dynamic position with safety gap
+          padding + 10,
+          padding + 15 // Anchor to the top of the grid
         );
       } else {
         predictionProgress = 0;

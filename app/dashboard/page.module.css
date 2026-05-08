@@ -8,9 +8,9 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 2rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   background: rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(0, 255, 128, 0.1);
   backdrop-filter: blur(10px);
@@ -187,11 +187,11 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem 5rem 1.5rem; /* Added 5rem bottom padding */
   max-width: 1800px;
   margin: 0 auto;
   width: 100%;
-  max-height: calc(100vh - 120px);
+  height: calc(100vh - 140px);
   overflow: hidden;
 }
 

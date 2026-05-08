@@ -299,8 +299,8 @@ export default function MarketVisualizer({ isLocked = false }: MarketVisualizerP
         ctx.textAlign = 'left';
         ctx.fillText(
           `TREND PROJECTION (σ = ${sigma.toFixed(5)}, slope = ${(slope * 100).toFixed(3)}%)`,
-          lastX + 15,
-          lastCloseY - 30
+          lastX + 20,
+          padding + 30 // Fixed top position to avoid line collision
         );
       } else {
         predictionProgress = 0;

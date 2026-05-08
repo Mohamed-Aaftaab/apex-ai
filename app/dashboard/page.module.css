@@ -59,14 +59,14 @@
 }
 
 .metricItem .label {
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   color: var(--text-muted);
   letter-spacing: 1px;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
 }
 
 .metricItem .value {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #fff;
   font-family: var(--font-mono);
   font-weight: bold;
@@ -188,8 +188,8 @@
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem 5rem 1.5rem; /* Added air at bottom */
   max-width: 1800px;
   margin: 0 auto;
   width: 100%;

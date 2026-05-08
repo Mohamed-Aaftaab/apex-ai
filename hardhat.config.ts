@@ -1,13 +1,11 @@
-import { defineConfig } from "hardhat/config";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-require("@nomicfoundation/hardhat-ethers");
-require("@nomicfoundation/hardhat-verify");
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-ethers";
+import "@nomicfoundation/hardhat-verify";
 import * as dotenv from "dotenv";
 
 dotenv.config({ path: ".env.local" });
 
-export default defineConfig({
+const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.20",
     settings: {
@@ -19,7 +17,6 @@ export default defineConfig({
   },
   networks: {
     mantleSepolia: {
-      type: "http",
       url: "https://rpc.sepolia.mantle.xyz",
       chainId: 5003,
       accounts: (() => {
@@ -50,4 +47,6 @@ export default defineConfig({
       },
     ],
   },
-});
+};
+
+export default config;

@@ -17,6 +17,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     mantleSepolia: {
+      type: "http",
       url: "https://rpc.sepolia.mantle.xyz",
       chainId: 5003,
       accounts: (() => {

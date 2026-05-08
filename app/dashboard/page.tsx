@@ -225,16 +225,48 @@ export default function Dashboard() {
       <div className="scanline-overlay"></div>
 
       <header className={styles.header}>
+        <div className={styles.branding}>
+          <h1>APEX.AI</h1>
+          <p>MANTLE NETWORK // BOT-HUNTER ENGINE</p>
         </div>
-        <div className={styles.statusBadge}>
-          <span className={`${styles.dot} ${syncStatus === 'SYNCING' ? styles.syncing : ''}`}></span>
-          {syncStatus === 'SYNCING' ? 'LOGGING TO REGISTRY' :
-            syncStatus === 'SCANNING' ? 'SCANNING LIVE BLOCKS' :
-              syncStatus === 'SYNCED' ? 'SYNCED TO REGISTRY' :
-                syncStatus === 'ERROR' ? 'RPC ERROR' :
-                  'INITIALIZING...'}
+
+        <div className={styles.centerStatus}>
+          <div className={styles.metricsBar}>
+            <div className={styles.metricItem}>
+              <span className={styles.label}>BLOCKS SCANNED</span>
+              <span className={styles.value}>{engineStats.blocksAnalyzed}</span>
+            </div>
+            <div className={styles.metricItem}>
+              <span className={styles.label}>BOTS DETECTED</span>
+              <span className={styles.value}>{engineStats.botsDetected}</span>
+            </div>
+            <div className={styles.metricItem}>
+              <span className={styles.label}>ON-CHAIN REP</span>
+              <span className={styles.value}>{engineStats.onChainLogged}</span>
+            </div>
+          </div>
+
+          <div className={styles.huntingStatus}>
+            <div className={styles.statusPill}>
+              <span className={styles.pillLabel}>AGENT</span>
+              <span className={styles.pillValue} style={{ color: '#00ff00' }}>ACTIVE</span>
+            </div>
+            <div className={styles.statusPill}>
+              <span className={styles.pillLabel}>PREDATOR</span>
+              <span className={styles.pillValue} style={{ color: '#ff0055' }}>STANDBY</span>
+            </div>
+            <div className={styles.statusPill}>
+              <span className={styles.pillLabel}>CAPTURABLE</span>
+              <span className={styles.pillValue}>${(Number(engineStats.blocksAnalyzed) * 1.42).toFixed(2)}</span>
+            </div>
+          </div>
         </div>
-        <div style={{ marginLeft: '1rem' }}>
+
+        <div className={styles.headerActions}>
+          <div className={styles.scanningIndicator}>
+            <div className={styles.pulse} />
+            {syncStatus === 'SYNCING' ? 'LOGGING TO REGISTRY' : 'SCANNING LIVE BLOCKS'}
+          </div>
           <ConnectWalletButton />
         </div>
       </header>

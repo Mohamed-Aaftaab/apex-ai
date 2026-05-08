@@ -213,11 +213,11 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(0, 255, 128, 0.1);
   border-left: 3px solid var(--color-radar);
-  padding: 1.2rem;
-  border-radius: 6px;
+  padding: 0.6rem 1rem; /* Much thinner padding */
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.3rem; /* Tighter gap */
   flex-shrink: 0;
   transition: all 0.2s ease;
   
@@ -245,7 +245,7 @@
 .patternLabel {
   font-family: var(--font-mono);
   font-weight: bold;
-  font-size: 0.85rem; /* Increased from 0.7rem */
+  font-size: 0.75rem; /* Slightly smaller for density */
   color: var(--text-main);
   letter-spacing: 0.5px;
 }

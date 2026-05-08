@@ -11,8 +11,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem; /* Restored for better visual balance */
-  background: rgba(0, 0, 0, 0.8);
+  padding: 1.25rem 2rem;
+  background: rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid rgba(0, 255, 128, 0.1);
   backdrop-filter: blur(10px);
   z-index: 10;
@@ -188,8 +188,8 @@
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 1.25rem;
-  padding: 1rem 1.5rem 3rem 1.5rem; /* Reduced bottom padding to fill gap */
+  gap: 1.5rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
   max-width: 1800px;
   margin: 0 auto;
   width: 100%;

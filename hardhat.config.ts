@@ -1,3 +1,4 @@
+/// <reference types="@nomicfoundation/hardhat-verify" />
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-verify";
@@ -33,6 +34,7 @@ const config: HardhatUserConfig = {
     artifacts: "./artifacts-hardhat",
     cache: "./cache-hardhat",
   },
+  // @ts-ignore - Explicitly bypassing if plugin types are being stubborn
   etherscan: {
     apiKey: {
       mantleSepolia: "any",

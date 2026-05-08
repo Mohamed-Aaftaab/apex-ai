@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^4.0.10",
+    "@nomicfoundation/hardhat-verify": "^3.0.17",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/parse-json": "^4.0.2",

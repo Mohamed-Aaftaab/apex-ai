@@ -2,6 +2,7 @@ import { defineConfig } from "hardhat/config";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 require("@nomicfoundation/hardhat-ethers");
+require("@nomicfoundation/hardhat-verify");
 import * as dotenv from "dotenv";
 
 dotenv.config({ path: ".env.local" });
@@ -33,5 +34,20 @@ export default defineConfig({
     sources: "./contracts",
     artifacts: "./artifacts-hardhat",
     cache: "./cache-hardhat",
+  },
+  etherscan: {
+    apiKey: {
+      mantleSepolia: "any",
+    },
+    customChains: [
+      {
+        network: "mantleSepolia",
+        chainId: 5003,
+        urls: {
+          apiURL: "https://explorer.sepolia.mantle.xyz/api",
+          browserURL: "https://explorer.sepolia.mantle.xyz",
+        },
+      },
+    ],
   },
 });

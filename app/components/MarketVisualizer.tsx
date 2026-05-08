@@ -284,8 +284,8 @@ export default function MarketVisualizer({ isLocked = false }: MarketVisualizerP
             ctx.font = '800 10px monospace';
             ctx.shadowBlur = 0;
             ctx.textAlign = 'left';
-            ctx.fillStyle = '#00FFFF'; // DIAGNOSTIC CYAN
-            ctx.fillText(label, targetX + 50, targetY + 4); // PUSHED TO +50
+            ctx.fillStyle = color; // RESTORE BRAND COLOR
+            ctx.fillText(label, targetX + 25, targetY + 4); // FINAL OFFSET (+25 is perfect)
           }
         };
 
@@ -319,7 +319,7 @@ export default function MarketVisualizer({ isLocked = false }: MarketVisualizerP
   }, [dataPoints, isLocked]);
 
   return (
-    <div className={styles.container} style={{ border: '2px solid #00ff80', borderRadius: '12px' }}>
+    <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.title}>
           MNT/USDT
